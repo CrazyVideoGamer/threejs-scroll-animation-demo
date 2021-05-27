@@ -67,16 +67,16 @@ const dogeMoonTexture = new THREE.TextureLoader().load("dogemoon.png");
 const normalMapTexture = new THREE.TextureLoader().load("normalMap.jpg");
 
 const dogeMoonSphere = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.SphereGeometry(5, 32, 32),
   new THREE.MeshStandardMaterial( {
     map: dogeMoonTexture,
     normalMap: normalMapTexture
   } )
 )
 
-dogeMoonSphere.position.z = 30;
-dogeMoonSphere.position.x = -10;
-
+dogeMoonSphere.position.z = -30;
+dogeMoonSphere.position.x = -30;
+dogeMoonSphere.position.y = 20;
 scene.add(dogeMoonSphere);
 
 
@@ -91,8 +91,8 @@ function moveCamera() {
   gameControllerCube.rotation.z += 0.01;
 
   camera.position.z = top * -0.01;
-  // camera.position.y = top * -0.0002;
-  // camera.position.x = top * -0.0002;
+  //camera.position.y = top * -0.0002;
+  //camera.position.x = top * -0.0002;
 }
 moveCamera(); // Run move camera so the camera adjusts immeadiately, without scroll
 
