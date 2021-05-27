@@ -94,6 +94,7 @@ function moveCamera() {
   // camera.position.y = top * -0.0002;
   // camera.position.x = top * -0.0002;
 }
+moveCamera(); // Run move camera so the camera adjusts immeadiately, without scroll
 
 document.body.onscroll = moveCamera;
 
